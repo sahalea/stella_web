@@ -1,0 +1,10 @@
+.app-logo{
+    display: block;
+    img{
+        display: block;
+        &.img-one{
+            margin: 0 auto;
+            margin-bottom: 0.5rem;
+        }
+    }
+}

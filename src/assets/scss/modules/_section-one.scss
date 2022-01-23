@@ -1,0 +1,158 @@
+.section-one{
+    margin-top: calc(-128px / 2);
+    .content{
+        width: 100%;
+        height: 128px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 2px solid #FFFFFF;
+        box-shadow: 0px 8px 16px 8px rgba(0, 0, 0, 0.03);
+        backdrop-filter: blur(40px);
+        border-radius: 20px;
+        padding: 1.5rem 2rem;
+        @include media-breakpoint-down(xxl) { 
+            height: auto;
+        }
+        > .row{
+            > div{
+                padding: 0.5rem;
+                @include media-breakpoint-down(sm) {
+                    padding: 0 0.5rem;
+                }
+            }
+        }
+        .form-group{
+            @include media-breakpoint-down(sm) {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                padding: 0.5rem 0;
+                width: 100%;
+            }
+            .form-label{
+                display: block;
+            }
+            .ant-select {
+                .ant-select-selector{
+                    width: 250px;
+                    border: 0;
+                    padding: 0;
+                    box-shadow: none !important;
+                    background-color: transparent;
+                    .ant-select-selection-search{
+                        left: 0;
+                        width: 100%;
+                    }
+                    .ant-select-selection-item{
+                        @include font-family($font-main,  0.9375em,  black, 600, 22.5px);
+                    }
+                }
+                .ant-select-arrow{
+                    display: none;
+                }
+                .ant-select-selection-placeholder{
+                    padding: 0;
+                    @include font-family($font-main,  0.9375em,  black, 600, 22.5px);
+                }
+            }
+
+            .btn-group{
+                margin-top: -5px;
+                @include flex(center, normal);
+                p{
+                    font-size: 1.1em;
+                    color: black;
+                    font-weight: 300;
+                    margin: 0 1rem 0 0;
+                }
+                .ant-radio-group{
+                    border-radius: 50px;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    overflow: hidden;
+                    .ant-radio-button-wrapper{
+                        border: 0;
+                        color: black;
+                        line-height: 26px;
+                        background-color: transparent;
+                        &::before{
+                            display: none;
+                        }
+                        &:hover{
+                            color: blue;
+                        }
+                    }
+                    @media (min-width: 991.98px) and (max-width: 1199.98px) { 
+                        .ant-radio-button-wrapper{                    
+                            padding: 0 0.5rem;
+                        }
+                     }
+                }
+            }
+
+            .btn-search{
+                width: 100%;
+                height: 55px;
+                border-radius: 20px;
+                transition: all ease .4s;
+                @include flex(center, center);
+                @include font-family($font-main, 1.55em,  white, 700, 1);
+                background: linear-gradient(90deg, #72A2AF 0%, #4A7889 100%);
+                .anticon {
+                    font-size: 1.2em;
+                }
+                &:hover{
+                    background: linear-gradient(90deg, #527b86 0%, #2c4f5c 100%);
+                }
+            }
+        }
+
+        .date-box{
+            @include flex(center, normal);
+            position: relative;
+            &::before, &::after{
+                content: '';
+                width: 1px;
+                height: 16px;
+                background-color: rgba(0, 0, 0, 0.2);
+                @include position(absolute, auto, auto, 0.3rem, -2rem);
+            }
+            &::after{
+                left: auto;
+                right: 0;
+                @include media-breakpoint-down(xxl) { 
+                    display: none;
+                }
+            }
+            .form-group{
+                position: relative;
+                .ant-picker {
+                    width: 150px;
+                    border: 0 !important;
+                    box-shadow: none;
+                    padding: 0;
+                    background: transparent;
+                    @include media-breakpoint-down(sm) {
+                        width: 100%;
+                    }
+                    .ant-picker-suffix{
+                        display: none;
+                    }
+                    ::placeholder {
+                        color: black;
+                        font-weight: 300;
+                      }
+                }
+                &:last-child{
+                    &::before{
+                        content: '';
+                        display: block;
+                        width: 13.5px;
+                        height: 8.5px;
+                        background: url('../../images/ic-arrow-line.svg');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        @include position(absolute, auto, auto, 0.5rem, -2rem);
+                    }
+
+                }
+            }
+        }
+    }
+}

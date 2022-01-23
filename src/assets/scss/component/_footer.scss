@@ -1,0 +1,93 @@
+.footer{
+    width: 100%;
+    background-color: $footer;
+    .footer-top{
+        padding: 7em 0;
+        @include media-breakpoint-down(sm) {
+            .row{
+                > div{
+                    padding-bottom: 1rem;
+                    &:nth-last-child(1),
+                    &:nth-last-child(2){
+                        border-top: 1px solid rgba(255, 255, 255, 0.2);
+                        padding-bottom: 0;
+                        padding-top: 2rem;
+                    }
+                    &:nth-last-child(3),
+                    &:nth-last-child(1){
+                        border-left: 1px solid rgba(255, 255, 255, 0.2);
+                        .nav, h3{
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+        .app-logo{
+            max-width: 65px;
+            margin-bottom: 1rem
+        }
+        h3{
+            @include font-family($font-main,  0.7875em,  rgba(255, 255, 255, 0.6), 300, 0); 
+        }
+        .nav{
+            .nav-link{
+                padding: 1rem 0;
+                @include font-family($font-main,  1em,  white, 300, 0); 
+                &:hover{
+                    opacity: 0.5;
+                }
+            }
+            @include media-breakpoint-down(md) {
+                &.social{
+                    flex-direction: column;
+                    .nav-link{
+                        width: 120px;
+                        padding: 0.5rem 0;
+                        &:last-child{
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+            @include media-breakpoint-down(sm) {
+                &.social{
+                    align-items: flex-end;
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        padding: 1rem 0;
+        @include flex(center, space-between);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        .nav{
+            .nav-item{
+                .nav-link{
+                    padding: 0.5rem;
+                    @include font-family($font-main,  0.875em,  rgba(255, 255, 255, 0.6), 300, 0);
+                    .icon{
+                        width: 16px;
+                    }
+                    &:hover{
+                        opacity: 0.5;
+                    }
+                }
+                &:nth-last-child(2){
+                    .nav-link{
+                        .icon{
+                            width: 8px;
+                        }
+                    }
+                }
+            }
+            @include media-breakpoint-down(sm) {
+                justify-content: center;
+                &.justify-content-end{
+                    justify-content: center !important;
+                }
+            }
+        }
+    }
+
+}

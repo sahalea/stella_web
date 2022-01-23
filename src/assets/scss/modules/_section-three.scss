@@ -1,0 +1,87 @@
+.section-three{
+    background: #F6F8F9;
+    padding: 3.25em 0;
+    border-top: 1px solid #D9E5E9;
+    border-bottom: 1px solid #D9E5E9;
+    @include media-breakpoint-down(sm) {
+        padding: 2rem 0;
+    }
+    .container{
+        position: relative;
+    }
+    .content{
+        max-width: 450px;
+        h2{
+            @include font-family($font-main,  2.25em,  black, 600, 1);
+        }
+        p{
+            @include font-family($font-main,  1em,  $font-color-1, 400, 22.5px);
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            &.list{
+                margin: 3.25em 0;
+                padding: 0;
+                li{
+                    display: block;
+                    position: relative;
+                    @include flex(center, auto);
+                    padding-bottom: 2rem;
+                    @include font-family($font-main,  1em,  $font-color-1, 400, 1);
+                    .icon{
+                        margin-right: 2rem;
+                    }
+                    &:last-child{
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        .social{
+            padding-top: 2.1875em;
+            border-top: 1px solid #D9E5E9;
+            .ant-rate-star-zero{
+                .ant-rate-star-first, .ant-rate-star-second{
+                    color: #485D65;
+                }
+            }
+            .ant-rate-star-half{
+                .ant-rate-star-second{
+                    color: #485D65;
+                }
+            }
+            ul{
+                &.store{
+                    padding-top: 1rem;
+                    @include flex(center, auto);
+                    li{
+                        &:first-child{
+                            margin-right: 1rem;
+                        }
+                        @include media-breakpoint-down(md) { 
+                            max-width: 120px;
+                            &:first-child{
+                                margin-right: 0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .img-iphone{
+        display: block;
+        max-width: 340px;
+        @include position(absolute, 1rem, 0, auto, auto);
+        @include media-breakpoint-down(lg) { 
+            max-width: 240px;
+            top: 0;
+        }
+        @include media-breakpoint-down(md) { 
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+.section-two{
+    padding: 5.375rem 0 4.125rem 0;
+    @include media-breakpoint-down(sm) {
+        padding: 2rem 0;
+    }
+    .title{
+        max-width: 360px;
+        h2{
+            @include font-family($font-main,  2.25em,  black, 600, 1);
+        }
+        p{
+            @include font-family($font-main,  1em,  $font-color-1, 400, 22.5px);
+        }
+    }
+    .slick-slider {
+        .slick-list{
+            margin-left: -0.5rem;
+            margin-right: -0.5rem;
+            .slick-track{
+                .slick-slide{
+                    padding: 0 0.5rem;
+                }
+            }
+        }
+        .slick-arrow{
+            width: auto;
+            height: auto;
+            z-index: 2;
+            @include position(absolute, -35px, 0, auto, auto);
+            @include media-breakpoint-down(sm) { 
+                top: 30%;
+                margin: auto;
+            }
+            @include media-breakpoint-down(xs) { 
+                display: none;
+            }
+            &::before{
+                content: '';
+                display: block;
+                width: 12px;
+                height: 21px;
+                background-image: url('../../images/img-arrow.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                transition: border-width 150ms ease-in-out;
+            }
+            &.slick-prev{
+                right: 45px;
+                @include media-breakpoint-down(sm) { 
+                    right: auto !important;
+                }
+                &::before{
+                    transform: rotate(180deg);
+                }
+            }
+            &:hover{
+                opacity: 0.3;
+            }
+        }
+    }
+    .figure{
+        position: relative;
+        .badge {
+            border-radius: 50px;
+            padding: 0.25rem 1.2rem;
+            transition: all ease .4s;
+            background: rgba(0, 0, 0, 0.8) !important;
+            @include position(absolute, 0.5rem, 0.5rem, auto, auto);
+            @include font-family($font-main,  0.9375em,  white, 400, 22.5px);
+        }
+        .figure-caption{
+            @include font-family($font-main,  1.125em,  $font-color-1, 600, 22.5px);
+            span{
+                display: block;
+                @include font-family($font-main,  0.875em,  rgba(34, 34, 34, 0.7), 400, 22.5px);
+                em{
+                    font-style: normal;
+                    padding-left: 0.5rem;
+                    &::before{
+                        content: "";
+                        display: inline-block;
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 100%;
+                        margin-right: 0.5rem;
+                        transform: translateY(-2px);
+                        background-color: #C4C4C4;
+                    }
+                }
+            }
+        }
+        &:hover{
+            .badge{
+                background: $footer !important;
+            }
+            .figure-caption{
+                color: $footer;
+                span{
+                    color: $footer;
+                }
+            }
+        }
+    }
+}

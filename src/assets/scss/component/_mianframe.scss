@@ -1,0 +1,49 @@
+.main-frame{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: calc( 100vh - 128px / 2);
+    min-height: 50vh;
+    background-color: black;
+    overflow: hidden;
+    .carousel-inner{
+        .carousel-item{
+            height: calc( 100vh - 128px / 2);
+            img{
+                @include position(absolute, 0, auto, auto, 0);
+                opacity: 0.8;
+            }
+            .carousel-caption{
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                @include flex(center, center);
+                background: radial-gradient(63.67% 62.72% at 50.05% 63.56%, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+                &::before{
+                    content: " ";
+                    width: 100%;
+                    height: 100vh;
+                    @include position(absolute, 0, auto, auto, 0);
+                    background: radial-gradient(44.89% 412.59% at 50% 50%, rgba(0, 0, 0, 0) 88.14%, rgba(0, 0, 0, 0.33) 100%);
+                }
+                .carousel-text{
+                    max-width: 819px;
+                    h3{
+                        @include font-family($font-main,  9em,  white, 700, 1.1em);
+                    }
+                    p{
+                        margin: 0 auto;
+                        max-width: 310px;
+                        @include font-family($font-main,  1.125em,  white, 600, 1.1em);
+                    }
+                    @include media-breakpoint-down(md) { 
+                        h3{
+                            font-size: 5em;
+                        }
+                     }
+                }
+            }
+        }
+    }
+}

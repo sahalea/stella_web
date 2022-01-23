@@ -1,0 +1,43 @@
+.app-login {
+  .container-fluid {
+    @include flex(center, center);
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    .ant-form {
+      width: 100%;
+      max-width: 450px;
+      padding: 3rem;
+      border-radius: 10px;
+      background: white;
+      .app-logo {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+      }
+      .ant-btn-primary {
+        width: 100%;
+      }
+    }
+    p{
+      margin-bottom: 0;
+      text-align: center;
+      font-size: 0.9em;
+      span{
+        display: block;
+        font-weight: 500;
+        font-size: 1.3em;
+      }
+      &.isSuccess{
+        span{
+          color: green;
+        }
+      }
+      &.isFailed{
+        span{
+          color: red;
+        }
+      }
+    }
+  }
+}

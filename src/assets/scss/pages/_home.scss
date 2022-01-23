@@ -1,0 +1,17 @@
+.app-home{
+    .app-content{
+        height: 100%;
+        border-radius: 6px;
+        box-shadow: 0 5px 27px 0 rgba(0, 0, 0, 0.16);
+        background-color: #ffffff;
+        overflow: hidden;
+        > .row{
+            margin-left: -0.2rem;
+            margin-right: -0.2rem;
+            padding: 0 1rem 1rem 0;
+            > div{
+                padding: 0 0.2rem;
+            }
+        }
+    }
+}

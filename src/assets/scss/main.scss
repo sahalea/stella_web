@@ -1,0 +1,25 @@
+// BOOTSTRAP 
+@import '~bootstrap/scss/bootstrap-grid.scss';
+@import '~bootstrap/scss/bootstrap.scss';
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+@import '~antd/dist/antd.css';
+
+// FONTS
+@import "./fonts/icon";
+
+// UTILS
+@import "./utils/variables", "./utils/mixins";
+
+// NORMALISE
+@import "./core/normalize";
+
+// COMPONENTS
+@import "./component/layout",  "./component/mianframe", "./component/input", "./component/button",
+  "./component/header", "./component/footer", "./component/logo";
+
+// MODULES
+@import "./modules/section-one", "./modules/section-two", "./modules/section-three", "./modules/section_four";
+
+// PAGES
+@import "./pages/404", "./pages/login", "./pages/home";
