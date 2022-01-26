@@ -13,7 +13,7 @@ const Footer = () => {
       <Container>
         <div className="footer-top">
           <Logo />
-          <Row className="mt-4">
+          <Row>
             <Col xs={6} sm={3} md={2}>
               <h3>ABOUT</h3>
               <Nav className="flex-column">
@@ -52,8 +52,8 @@ const Footer = () => {
           </Row>
         </div>
         <div className="footer-bottom">
-          <Row style={{ width: '100%' }}>
-            <Col sm={6}>
+          <Row>
+            <Col sm={8}>
               <Nav>
                 <Nav.Item>
                   <Nav.Link href="/home">
@@ -67,7 +67,7 @@ const Footer = () => {
                 </Nav.Item>
               </Nav>
             </Col>
-            <Col sm={6}>
+            <Col sm={4}>
               <Nav className="justify-content-end">
                 <Nav.Item>
                   <Nav.Link href="/">

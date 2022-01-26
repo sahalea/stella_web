@@ -32,7 +32,7 @@
                 margin: auto;
             }
             @include media-breakpoint-down(xs) { 
-                display: none;
+                top: 50%;
             }
             &::before{
                 content: '';

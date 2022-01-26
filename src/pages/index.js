@@ -1,6 +1,6 @@
-import React from 'react';
-import { Layout, Mainframe } from '../component';
-import { SectionOne, SectioTwo, SectionThree, SectionFour } from '../modules';
+import React from "react";
+import { Layout, Mainframe } from "../component";
+import { SectionOne, SectioTwo, SectionThree, SectionFour } from "../modules";
 
 const Home = () => (
   <Layout className="index-home">
@@ -12,4 +12,4 @@ const Home = () => (
   </Layout>
 );
 
-export default Home;
+export default Home
